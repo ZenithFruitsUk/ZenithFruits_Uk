@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith International Ventures</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main / Home Section -->
+    <div class="main" id="home">
+        <!-- Navbar inside main but sticky -->
+        <div class="navbar-wrapper">
+            <div class="navbar">
+                <div class="icon">
+                    <img src="images/zenith logo.png" alt="Zenith Logo" class="logo-image">
+                </div>
+
+                <div class="menu">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#products">Products</a></li>
+                       <!-- <li><a href="#partners">Clients</a></li> -->
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="search">
+                    <input class="srch" type="search" placeholder="Type to Search">
+                    <button class="btn">Search</button>
+                </div>  -->
+            </div>
+        </div>
+
+        <!-- Home Content -->
+        <div class="content">
+            <h1><span>Zenith International Ventures</span> <br>Group Ltd</h1>
+            <p class="para">
+                Zenith International Ventures Group, headquartered in London, is poised to expand its portfolio management expertise across the UK, Europe, Canada, and the US. With a strategic plan to launch and scale operations in these regions, Zenith aims to establish a robust presence through both direct expansion and a franchise model. Our mission is to be the leading choice for businesses seeking to grow their portfolios globally, leveraging our extensive industry experience and commitment to excellence.
+            </p>
+            <a href="#contact"><button class="cn">Contact Us</button></a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <h1>About Us</h1>
+        <p>Zenith International Ventures Group, headquartered in London, is poised to expand its portfolio management expertise across the UK, Europe, Canada, and the US. With a strategic plan to launch and scale operations in these regions, Zenith aims to establish a robust presence through both direct expansion and a franchise model. Our mission is to be the leading choice for businesses seeking to grow their portfolios globally, leveraging our extensive industry experience and commitment to excellence.</p>
+    </section>
+
+<section id="products">
+  <h1>Our Products</h1>
+
+   <!-- Category Buttons -->
+    <div class="categories">
+        <button onclick="showCategory('fruits_veggies')">Fruits & Vegetables</button>
+        <button onclick="showCategory('pulses')">Pulses & Spices</button>
+        <button onclick="showCategory('rice')">Rice Varieties</button>
+    </div>
+
+  <!-- Product Carousel -->
+  <div class="product-carousel">
+    <button class="carousel-btn left" onclick="moveCarousel(-1)">&#8249;</button>
+    <div class="product-track" id="product-track">
+      <!-- JS will inject product pages here -->
+    </div>
+    <button class="carousel-btn right" onclick="moveCarousel(1)">&#8250;</button>
+  </div>
+</section>
+
+
+    <!-- Partners Section -->
+    <!-- <section id="partners">
+        <h1>Our Clients</h1>
+        <div class="partner-list">
+            <div class="partner">
+                <img src="images/logo1.png" alt="Partner 1">
+                <h3>Shop One</h3>
+                <p>+123 456 789</p>
+            </div>
+            <div class="partner">
+                <img src="images/logo2.png" alt="Partner 2">
+                <h3>Shop Two</h3>
+                <p>+987 654 321</p>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Contact Info Section -->
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <div class="contact-info">
+            <p><strong>Registered Office:</strong> 1 Elmfield Park, Bromley, England, BR1 1LU</p>
+            <p><strong>Phone:</strong> +44 7951852523</p>
+            <p><strong>Email:</strong> zenithuk@gmail.com</p>
+        </div>
+    </section>
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

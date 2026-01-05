@@ -1,0 +1,366 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main (Home section) */
+.main {
+    width: 100%;
+    background-image: url('images/1.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 109vh; /* full screen for home */
+    position: relative;
+}
+
+/* Navbar Logo Container */
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centers the logo vertically */
+    margin-top: 10px;
+}
+
+/* Logo Image */
+.logo-image {
+    width: 60px;            /* adjust size as needed */
+    height: 60px;
+    object-fit: contain;    /* keeps the aspect ratio */
+    transition: transform 0.3s ease;
+}
+
+/* Optional: Hover effect */
+.logo-image:hover {
+    transform: scale(1.1);  /* subtle zoom on hover */
+}
+
+/* Optional: Add a subtle shadow for depth */
+.logo-image {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;    /* slight rounded corners */
+}
+
+/* Navbar wrapper to allow sticky inside main */
+.navbar-wrapper {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.0); /* transparent */
+}
+
+/* Navbar */
+.navbar {
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; /* always visible */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.0); /* transparent */
+}
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  min-width: 180px;
+  z-index: 1001;
+}
+
+.dropdown-content li {
+  margin: 0;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 10px 15px;
+  color: black;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+  background: rgb(233, 180, 56);
+  color: white;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li {
+    list-style: none;
+    margin-left: 62px;
+    font-size: 15px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    color: rgb(233, 180, 56);
+}
+
+/* Search */
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.srch {
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid rgb(233, 180, 56);
+    color: black;
+    font-size: 16px;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    outline: none;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    background: rgb(233, 180, 56);
+    border: 2px solid rgb(233, 180, 56);
+    color: black;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+/* Home Content */
+.main .content {
+    max-width: 1000px; /* keeps content nicely readable */
+    margin: 0 auto;    /* centers horizontally */
+    padding: 0 20px;   /* small padding on left/right */
+    padding-top: 102px; /* space for navbar */
+    color: black;
+}
+
+
+.content h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 50px;
+    margin-top: 0;
+    letter-spacing: 2px;
+}
+
+.content h1 span {
+    color: rgb(15, 92, 191);
+}
+
+.content .para {
+    margin-top: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+
+.content .cn {
+    width: 160px;
+    height: 40px;
+    background: rgb(233, 180, 56);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.content .cn:hover {
+    background: rgb(210, 160, 45);
+}
+
+/* ===== Sections ===== */
+section {
+    width: 100%;
+    min-height: 100vh; /* always fills full screen height */
+    padding: 150px 10% 40px 10%; /* top padding for navbar + side padding */
+    background: #fff;
+}
+
+section:nth-of-type(even) {
+    background: #f9f9f9;
+}
+
+section h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: rgb(68, 120, 211);
+    text-align: center;
+}
+
+/* Product Section */
+#products { 
+    min-height: 100vh; 
+    overflow: visible; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    background: #fff; 
+    position: relative; 
+}
+
+.product-carousel 
+{ 
+    position: relative; 
+    width: 100%; 
+    height: 65vh; /* adjustable */ 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden; 
+}
+
+.product-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+ .product-page {
+  flex: 0 0 100%; /* one full screen width per page */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr); /* ensure 2 rows always */
+  gap: 20px;
+  padding: 0 5%;
+  box-sizing: border-box;
+  align-content: center;
+}
+.product {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.product img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Carousel Arrows */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(233, 180, 56, 0.9);
+  border: none;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.carousel-btn.left { left: 20px; }
+.carousel-btn.right { right: 20px; }
+
+.carousel-btn:hover {
+  background: rgb(210, 160, 45);
+}
+
+
+/* Partners */
+.partner-list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.partner {
+    flex: 1 1 250px;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.partner img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Contact Info Section */
+.contact-info {
+    text-align: center;
+    font-size: 18px;
+    line-height: 2;
+    max-width: 600px;
+    margin: auto;
+    color: #333;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.categories button {
+    padding: 10px 20px;
+    background: rgb(233, 180, 56);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.categories button:hover {
+    background: rgb(210, 160, 45);
+}
